@@ -1,0 +1,10 @@
+version: "3.0"
+
+services:
+  django:
+    build: ./backend
+    command: "python3 manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    environment:
+      DEBUG: 'true'

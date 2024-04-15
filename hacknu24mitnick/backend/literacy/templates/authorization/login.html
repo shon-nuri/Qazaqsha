@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/log-in_and_sing-up_form.css' %}">
+    <title>Вход</title>
+</head>
+
+<body>
+<main>
+    <div class="circle"></div>
+    <div class="register-form-container">
+        <h1 class="form-title">
+            Вход
+        </h1>
+        <form method="POST" id="loginForm">
+            <div class="form-fields">
+                {% csrf_token %}
+                <div class="form-field">
+                    <input type="text" name="username" placeholder="Логин" required>
+                </div>
+                <div class="form-field">
+                    <input type="password" name="password" placeholder="Пароль" required>
+                </div>
+
+            </div>
+            <div class="form-buttons">
+                <button class="button" type="submit">Вход</button>
+                <div class="divider">или</div>
+                <a href="#" class="button button-google">Google</a>
+            </div>
+        </form>
+    </div>
+</main>
+</body>
+
+</html>

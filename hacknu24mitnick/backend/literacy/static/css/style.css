@@ -1,0 +1,345 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal; 
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#menu {
+    position: fixed;
+    margin-top: 0;
+    z-index:  2001 !important;
+}
+
+.menu {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.height-changer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar {
+    font-size: large;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #cccccce6;
+}
+
+.navbar-toggler {
+    border-color: #fff;
+    background-color: #000 ;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-toggler-icon {
+    color: #fff;
+    fill: #fff;
+}
+
+.nav-link.active {
+    color: #fff !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.collapse ul li :active {
+    color: #fff;
+    border-radius:30px;
+}
+
+.container ul li :active a {
+    color: #fff !important;
+}
+
+#navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#nav-link {
+    color: #fff;
+}
+
+h5.menu-title {
+    font-size: medium;
+    margin-bottom: 0 !important;
+    color: #fff;
+}
+
+.whatis{
+    color: #fff;
+    z-index: 2001;
+}
+
+#whatisTitle{
+    font-size: xx-large;
+    font-weight: 900;
+    font: bold;
+}
+
+.hero {
+    height: 125vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    margin: auto;
+    position: absolute;
+    z-index: 1 !important;
+    left: 0;
+    width: 100%;
+    height: 125vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-block.py-5.d-flex.justify-content-center.text-center.flex-column {
+    padding-bottom: 20vh;
+    padding-top: 10vh;
+} 
+
+.hero-image {
+    margin-top: 5vh;
+}
+
+.hero-heading {
+    color: #fff;        
+    font-weight: bold;
+    width: 100vw;
+}
+
+.hero-skills {
+    color: #fff;
+}
+
+.hero-devider-custom-line {
+    background-color: #fff;
+    width: 10vw;
+    height: 0.3em;
+    border-radius: 1rem;
+}
+
+.portfolio-devider-custom-line {
+    background-color: #000;
+    width: 10vw;
+    height: 0.3em;
+    border-radius: 1rem;
+}
+
+.portfolio-item-size {
+    position: relative;
+}
+
+.portfolio-item-size:hover .portfolio-item-size-content {
+    visibility: visible;
+}
+
+.portfolio-item-size-content {
+    position: absolute;
+    transition: all 0.1s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.portfolio-item-size-content-description {
+    color: #fff;
+    font-size: larger;
+    font-weight: 800;
+    text-align: center;
+}
+
+.modal-header {
+    border-bottom: none !important;
+}
+
+.divider-custom {
+    display: flex;
+    justify-content: center;
+}
+
+.devider-custom {
+    color: #2c3e50 ;
+}
+
+.portfolio-devider {
+    color: #2c3e50;
+}
+
+.portfolio-heading {
+    color: #000;
+    font-weight: 800;
+}
+
+.hero-devider .bi {
+    color: #fff;
+}
+
+.bi {
+    font-size: 2rem;
+}
+
+.devider-custom .bi {
+    font-size: 2rem;    
+}
+
+.devider-custom {
+    color: #2c3e50;
+}
+
+.portfolio-devider-custom-line {
+    background-color: #2c3e50;
+}
+
+.devider-custom-line {
+    background-color: #2c3e50;
+    color: #2c3e50;
+    width: 10vw;
+    height: 0.3em;
+    border-radius: 1rem;
+}
+
+.modal-title {
+    color: #2c3e50;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.modal-paragraph {
+    color: #2c3e50;
+}
+
+.about {
+    background-color: #000;
+    height: 100vh;
+}
+
+.about-contents-heading {
+    color: #fff !important;
+    font-weight: 800;
+}
+
+.about-contents-paragraph {
+    color: #fff;
+}
+
+.btn.btn-transparent {
+    border-color: #fff;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.btn.btn-transparent:hover {
+    background-color: #fff;
+    transition: 0.2s;
+    color: #2c3e50;
+}
+
+.col-12 .btn {
+    background-color: #1abc9ce6;
+    color: #fff;
+}
+
+.col-12 .btn:hover {
+    transition: 0.4s;
+    background-color: #fff;
+    border-color: #1abc9ce6;
+    color: #1abc9ce6;
+}
+
+#socials {
+    height: 66vh;
+    color: #fff;
+}
+
+.col-lg-7 i:hover {
+    transition: 0.2s;
+    color: #546b81;
+}
+
+.container-fluid.socials {
+    height: auto;
+}
+
+.bgc {
+    padding: 30px;
+}
+
+.bgc #navbar-brand {
+    font-size: 30px;
+}
+
+.card_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+/* Hover effect */
+.card:hover .card_overlay {
+    opacity: 1;
+}
+
+.px-1.py-1 {
+    font-size: larger;
+    font-weight: 600;
+}
+
+.team-member-info {
+    color: #fff;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.team-name {
+    font-size: medium;
+    font-weight: 600;
+}
+
+.location {
+    font-size: medium;
+    font-weight: 600;
+}
+
+.about-us-names.text-center {
+    text-align: center;
+}
+
+.about-us-description {
+    text-align: center;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready Translate Function</title>
+</head>
+
+<body>
+    <h1>Text Translator</h1>
+    <!-- Form for inputting text and selecting the target language -->
+    <form id="translation-form">
+        <!-- Text input for the original text -->
+        <div>
+            <label for="text-to-translate">Text to Translate:</label>
+            <textarea id="text-to-translate" rows="4" cols="50" required></textarea>
+        </div>
+        <!-- Select input for choosing the target language -->
+        <div>
+            <label for="target-language">Target Language:</label>
+            <select id="target-language" required>
+                <option value="kz">Kazakh</option>
+                <option value="eng">English</option>
+                <!-- Add more language options as needed -->
+            </select>
+        </div>
+        <!-- Submit button -->
+        <button type="submit">Translate</button>
+    </form>
+
+    <!-- Display the translated text -->
+    <div id="translated-text">
+        <h2>Translated Text:</h2>
+        <p id="translated-result"></p>
+    </div>
+
+    <!-- Add your JavaScript code here -->
+    <script>
+        document.getElementById('translation-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form submission
+            
+            // Get the text to translate and target language
+            const textToTranslate = document.getElementById('text-to-translate').value;
+            const targetLanguage = document.getElementById('target-language').value;
+
+            // Translate the text using an API
+            translateText(textToTranslate, targetLanguage)
+                .then(translatedText => {
+                    // Display the translated text
+                    document.getElementById('translated-result').innerText = translatedText;
+                })
+                .catch(error => {
+                    console.error('Translation error:', error);
+                    document.getElementById('translated-result').innerText = 'Error translating text';
+                });
+        });
+
+        // Function to translate text using an API
+        async function translateText(text, targetLanguage) {
+            // Replace YOUR_API_KEY and YOUR_API_URL with your API key and URL
+            const apiKey = 'YOUR_API_KEY';
+            const apiUrl = 'YOUR_API_URL';
+
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${apiKey}`
+                },
+                body: JSON.stringify({
+                    q: text,
+                    target: targetLanguage
+                })
+            });
+
+            const data = await response.json();
+            
+            // Assuming the API response structure contains a 'translatedText' field
+            return data.translatedText;
+        }
+    </script>
+</body>
+
+</html>

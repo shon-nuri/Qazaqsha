@@ -1,0 +1,34 @@
+/* Add basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the container holding all blocks */
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+/* Styling for individual blocks */
+.block {
+    margin: 10px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Give each block a different background color */
+#articles {
+    background-color: #e0f7fa;
+}
+
+#grammar {
+    background-color: #fff3e0;
+}
+
+#listening {
+    background-color: #f3e5f5;
+}

@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <link rel="stylesheet" href="{% static 'css/translator.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+<div id="menu" class="menu container-fluid">
+    <header class="container" id="menu-container">
+        <nav id="navbar" class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a id="navbar-brand" class="navbar-brand" href="{% url 'courses:base_page' %}">Qazaqsha</a>
+                <button id="height-changer-button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <h5 class="menu-title text-uppercase">Menu</h5>
+                    <i class="bi bi-list" id="toggler-icon"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a id="nav-link" class="nav-link" aria-current="page" href="{% url 'courses:translator' %}">Translator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="nav-link" class="nav-link" href="#developing">Alphabet</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
+<div class="container">
+    <h1>Translator</h1>
+
+    <div class="translation-form">
+        <form id="translate-form">
+            <div class="form-group">
+                <label for="source-lang">Source Language:</label>
+                <select id="source-lang">
+                    <option value="en">English</option>
+                    <option value="ru">Russian</option>
+                    <option value="kk">Kazakh</option>
+                </select></div>
+            <div class="form-group">
+                <label for="target-lang">Target Language:</label>
+                <select id="target-lang">
+                    <option value="en">English</option>
+                    <option value="ru">Russian</option>
+                    <option value="kk">Kazakh</option>
+                </select></div>
+            <div class="form-group">
+                <label for="source-text">Text to Translate:</label>
+                <textarea id="source-text" rows="5"></textarea>
+            </div>
+            <button type="submit">Translate</button>
+        </form>
+    </div>
+
+    <div class="translation-result">
+        <p id="translated-text"></p>
+    </div>
+</div>
+
+<script src="{% static 'js/translator.js' %}"></script>
+</body>
+</html>
+
+</body>
+</html>
